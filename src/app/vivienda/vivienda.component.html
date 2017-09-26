@@ -1,0 +1,9 @@
+
+<div class="titulo">
+  <h3 class="titulo">{{vivienda.titulo}}</h3>
+  <p>Precio: {{vivienda.precio | currency:'EUR':true}}</p>
+  <p>Nº habitaciones: {{vivienda.numeroHabitaciones}}</p>
+  <p>Teléfono: {{vivienda.telefono}}</p>
+
+  <img [style.width.px]="width" [style.height.px]="height" [style.background-image]="backgroundImg" />
+</div>

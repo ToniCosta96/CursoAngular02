@@ -1,0 +1,14 @@
+h1{
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.titulo{
+  background-color:#0174DF;
+  max-width: 450px;
+  height: 50px;
+}
+.separador{
+  background-color:#000000;
+  height: 5px;
+  margin-top: 5px;
+}

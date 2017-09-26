@@ -1,3 +1,26 @@
 <h1>
-  {{title}}
+  <!--{{title}}-->
 </h1>
+<app-cabecera></app-cabecera>
+<fieldset style="width:200px;">
+    <legend><b>Filtro</b></legend>
+    <input type="checkbox" [(ngModel)]="filtro_alquiler" (ngModelChange)="cambiarTitulo()" />Viviendas en alquiler<br>
+    <input type="checkbox" [(ngModel)]="filtro_venta" (ngModelChange)="cambiarTitulo()" />Viviendas a la venta
+</fieldset>
+<h2 id="titulo">{{titulo}}</h2>
+<table class="table" *ngIf="viviendas">
+  <tr>
+    <td *ngFor="let v of viviendas">
+      <div *ngIf="(filtro_alquiler && v.alquiler) || (filtro_venta && !v.alquiler)">
+        <app-vivienda [vivienda]="v"></app-vivienda>
+      <!--<h3>{{v.titulo}}</h3>
+      <p>Precio: {{v.precio}}</p>
+      <p>Habitaciones: {{v.numeroHabitaciones}}</p>
+      <p>Teléfono de contacto: {{v.telefono}}</p>
+      <img [src]="v.foto" [style.width.px]="img_width">-->
+    </div>
+    </td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+</table>
